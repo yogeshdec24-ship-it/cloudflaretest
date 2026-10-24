@@ -8,11 +8,6 @@ terraform {
     }
   }
 }
-
-provider "cloudflare" {
-  # Authentication comes from CLOUDFLARE_API_TOKEN
-}
-
 resource "cloudflare_dns_record" "A" {
   zone_id = var.cloudflare_zone_id
   name    = var.record_name
