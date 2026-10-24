@@ -6,6 +6,7 @@ terraform {
     }
   }
 }
+
 resource "cloudflare_ruleset" "user_agent_block" {
   zone_id     = var.cloudflare_zone_id
   name        = "Custom User Agent Security Rules"
@@ -19,4 +20,4 @@ resource "cloudflare_ruleset" "user_agent_block" {
     expression  = "(http.user_agent contains \"BadBot/1.0\") or (http.user_agent eq \"EvilCrawler\")"
     enabled     = true
   }
-  }
+}
