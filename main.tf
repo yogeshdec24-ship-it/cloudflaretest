@@ -1,3 +1,4 @@
+
 terraform {
   required_providers {
     cloudflare = {
@@ -22,3 +23,4 @@ resource "cloudflare_ruleset" "user_agent_block" {
       enabled     = true
     }
   ]
+}
